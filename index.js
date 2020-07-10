@@ -33,25 +33,30 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
-function client(name,edad,discount,type){
+function client(name,age,price,type){
 
   this.name=name,
-  this.edad=edad,
-  this.discount=discount,
+  this.age=age,
+  this.price=price,
   this.type=type;
 
 }
-
-const Jorge = new client("Jorge",30,0.25,"teacher");
-const Maria = new client("Maria",22,0.25,"student");
-const Pedro = new client("Pedro",35,0.10,"public");
-
-function calculator(client){
-  if(client.type==student OR teacher){
-    
+const burger1 = {
+  name:"Burger",
+  price:18,
+  category:"Lunch",
+  discount:function (customer){
+    if(customer==='student'||customer ==='teacher'){
+    return this.price -(this.price*0.25);
+  }else if (customer==='public') {
+    return this.price -(this.price*0.1);
   }
-}
-console.log(calculator(Jorge));
+  }
+};
+
+console.log(burger.discount('student'));
+console.log(burger.discount('teacher'));
+console.log(burger.discount('public'));
 
 ///////////////Reviews (MVP)///////////////////
 
