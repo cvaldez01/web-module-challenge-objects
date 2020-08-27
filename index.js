@@ -54,9 +54,9 @@ const burger1 = {
   }
 };
 
-console.log(burger.discount('student'));
-console.log(burger.discount('teacher'));
-console.log(burger.discount('public'));
+//console.log(burger.discount('student'));
+//console.log(burger.discount('teacher'));
+//console.log(burger.discount('public'));
 
 ///////////////Reviews (MVP)///////////////////
 
@@ -71,6 +71,15 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
+function feedbackByName(names){
+  for (let i=0; i < reviews.length; i++){
+    if(reviews[i].name==="Julius"){
+      return reviews[i].feedback;
+    }
+
+  }
+}
+console.log(feedbackByName("Julius"));
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
