@@ -124,8 +124,8 @@ and should return a string in the format `{name} gave the restaurant a {rating},
 const index=3;
 function getReviewByIndex(reviews, index) {
     for(let i=0 ; i < reviews.length;i++){
-      if(reviews[i]===reviews.lenght-1){
-        return `${reviews[i].name} gave the restaurant a ${reviews[i].rating} , and their feedback was: ${reviews[i].feedback}`;
+      if([i]==index){
+        return `${reviews[i].name} gave the restaurant a  ${reviews[i].rating} , and their feedback was: ${reviews[i].feedback}`;
       }
 
     }
@@ -142,8 +142,8 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
 function getLastReview(reviews) {
-  for(let i=0;i < reviews.lenght;i++)
-    if(reviews[i]==reviews[i].lenght-1){
+  for(let i=0;i < reviews.length;i++)
+    if(reviews[i]==reviews[i].length-1){
       return `${reviews[i].name} + "gave the restaurant a " ${reviews[i].rating} + "star review and their feedback was:" ${reviews[i].feedback}`;
     }
 
